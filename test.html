@@ -1,0 +1,142 @@
+<!doctype html>
+<head>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="teapot">
+		
+			<p class="text">Writing a blog burns a lot of caffeine. If you liked this post, you should buy me <span>a cup of tea</span>.
+			</p>
+			<div class="animation">
+				<a href="https://gumroad.com/l/QqtQ" class="click">Buy tea
+				</a>
+			</div>
+	</div>
+	
+</body>
+
+
+
+
+<style>
+	body {
+		margin: 200px;
+		padding: 0px;
+		font: 14px Eccentric Std, serif;
+	}
+
+	
+	.teapot{
+		background: url("teacon-small-sidetext.png") no-repeat;
+		width: 75px;
+		height: 75px;
+		text-indent: 0px;
+		padding: 0px;
+		margin: 0px;
+		overflow: hidden;
+		border-radius: 37px;
+		box-shadow: 0px 0px 10px rgb(1,102,70);
+	}
+	.text {
+		margin-left: 571px;
+		height: 50px;
+		width: 160px;
+		text-align:right;
+		color:rgb(1,102,70);
+		-webkit-transition: margin 0.5s;
+		-moz-transition: margin 0.5s;
+	}
+	
+	
+	span {
+		color:rgb(255,0,0);
+	}
+	
+	.teapot:hover{
+		background: url("teacon-small-sidetext.png") no-repeat;
+		background-position: -231px 0;
+		width: 230px;
+		height: 117px;
+		box-shadow: none;
+		border-radius: 0px;
+	
+	}
+	.teapot:hover .text {
+		margin-left: 71px;
+	}
+	.click{
+		background-position: -63px +230px;
+		display: none;
+		width: 50px;
+		height: 50px;
+		text-indent: -1000px;
+		margin-left: 180px;
+		margin-top: -13px;
+		z-index: 1;
+	}
+	.teapot:hover .animation{
+		background-position: -770px 0;
+		-webkit-transition-delay: 1s;
+		-webkit-transition: background-position ease-in-out 1.5s;
+		-moz-transition-delay: 1s;
+		-moz-transition: background-position ease-in-out 1.5s;
+	}	
+	.teapot:hover .animation .click {
+		display: block;	
+	}	
+	
+	a {
+		text-decoration: none;
+		color: gray;
+	}
+	
+	.animation{
+		background: url("string-animation.png") no-repeat;
+		background-position: 231px 0;
+		display: block;
+		width: 230px;
+		height: 50px;
+		padding: 0px;
+		margin-top: -16px;
+		text-indent: -1000px;
+		z-index: 2;
+	}
+	.teapot{
+	-webkit-animation:pulse 1s 3 normal;
+	-moz-animation:pulse 1s 3 normal;
+	}
+	
+	@-webkit-keyframes pulse{
+		0%   {
+		box-shadow: 0px 0px 10px rgb(1,102,70);}
+		50%  {box-shadow: 0px 0px 20px rgb(1,102,70);;
+		}
+		100% {
+		box-shadow: 0px 0px 10px rgb(1,102,70);}
+		}
+	@-moz-keyframes pulse{
+		0%   {
+		box-shadow: 0px 0px 10px rgb(1,102,70);}
+		50%  {box-shadow: 0px 0px 20px rgb(1,102,70);;
+		}
+		100% {
+		box-shadow: 0px 0px 10px rgb(1,102,70);}
+		}
+		
+	.teapot:hover .animation {
+		position:relative;
+		top:0px;
+		-webkit-animation:animation 1.5s 1 normal forwards;
+		-moz-animation:animation 1.5s 1 normal forwards;
+	}
+
+	@-webkit-keyframes animation {
+		from {background-position:231px 0;}
+		to {background-position:-770px 0;}
+	}
+	@-moz-keyframes animation {
+		from {background-position:231px 0;}
+		to {background-position:-770px 0;}
+	}
+	
+</style>
